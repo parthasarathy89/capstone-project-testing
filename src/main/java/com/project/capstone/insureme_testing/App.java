@@ -12,14 +12,10 @@ public class App
     public static void main( String[] args )
     {
     	//System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
-    	System.out.println("Starting Test case Execution");
     	ChromeOptions chromeOptions = new ChromeOptions();
     	//chromeOptions.setCapability("browserVersion", "119.0.6045.105");
     	chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.setBinary("/usr/bin/google-chrome");
-    	System.out.println("After browset settings");
     	WebDriver webDriver = new ChromeDriver(chromeOptions);
     	System.out.println("Starting Test case Execution");
     	System.out.println("Passing Input details");
@@ -40,7 +36,7 @@ public class App
         String r=webDriver.findElement(By.id("response")).getText();        
         System.out.println(r);
         // Validate webpage response
-        if (r.equals("Message Set")) {
+        if (r.equals("Message Sent")) {
         	System.out.println("Webpage response successfully validated");
         	webDriver.close();
         	System.exit(0);	
