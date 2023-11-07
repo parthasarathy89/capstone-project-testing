@@ -29,7 +29,7 @@ public class App
         webDriver.findElement(By.id("inputMail")).sendKeys("test@dummy.com");
         // Pass Phone Number
         webDriver.findElement(By.id("inputMessage")).sendKeys("Please call me to discuss");
-        // Click Login
+        // Click Submit
         webDriver.findElement(By.id("my-button")).click();
         System.out.println("Getting webpage response");
         // Check webpage response
